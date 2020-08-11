@@ -1,0 +1,139 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="380dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp">
+
+        <!--height_Line-->
+        <TextView
+            android:id="@+id/height_Line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.57"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--width_Line-->
+        <TextView
+            android:id="@+id/width_Line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#e5e5e5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/height_Line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.79" />
+
+        <!--Popular_Product_Image-->
+        <ImageView
+            android:id="@+id/Popular_Product_Image"
+            android:layout_width="110dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/popluar_products_one"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/height_Line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--New_Notice-->
+        <TextView
+            android:id="@+id/New_Notice"
+            android:text="NEW"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:textSize="13dp"
+            android:background="@drawable/new_bottom_creation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <!--Discount_Notice-->
+        <TextView
+            android:id="@+id/Discount_Notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/discount_bottom_creation"
+            android:text="30 % off"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"
+            app:layout_constraintLeft_toRightOf="@id/New_Notice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Popular_Product_Name-->
+        <TextView
+            android:id="@+id/Popular_Product_Name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="10dp"
+            android:text="Iphone 8 Plus"
+            android:textColor="#373737"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/Popular_Product_Type"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/height_Line"
+            app:layout_constraintTop_toBottomOf="@id/New_Notice"
+            app:layout_constraintVertical_bias="0" />
+
+        <!--Popular_Product_Type-->
+        <TextView
+            android:id="@+id/Popular_Product_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="10dp"
+            android:text="Apple"
+            android:textColor="#999999"
+            android:textSize="13dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/Rating_bar" />
+
+        <RatingBar
+            android:id="@+id/Rating_bar"
+            android:layout_width="79dp"
+            android:layout_height="15dp"
+            android:numStars="5"
+            android:stepSize=".5"
+            android:rating="3"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/width_Line"/>
+
+        <!--Popular_Product_Price-->
+        <TextView
+            android:id="@+id/Popular_Product_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:text="980000 KS"
+            android:textColor="#db7560"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/width_Line" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
